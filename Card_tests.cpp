@@ -88,6 +88,11 @@ TEST(trump_2) {
     ASSERT_EQUAL(c.is_trump(HEARTS), false);
 }
 
+TEST(trump_3) {
+    Card c(JACK, CLUBS);
+    ASSERT_EQUAL(c.is_trump(SPADES), true);
+}
+
 TEST(smaller_than_1) {
     Card c1(ACE, HEARTS);
     Card c2(TEN, DIAMONDS);
@@ -122,12 +127,6 @@ TEST(bigger_than_2) {
     Card c1(QUEEN, HEARTS);
     Card c2(TEN, DIAMONDS);
     ASSERT_EQUAL(c1>c2, true);
-}
-
-TEST(equals_to_1) {
-    Card c1(KING, SPADES);
-    Card c2(KING, CLUBS);
-    ASSERT_EQUAL(c1==c2, true);
 }
 
 TEST(not_equals_to_1) {
